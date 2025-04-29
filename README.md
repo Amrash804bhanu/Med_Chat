@@ -1,5 +1,6 @@
-GenAI Chatbot – Flask-based Prompt Analysis System
-Overview
+# GenAI Chatbot – Flask-based Prompt Analysis System
+
+# Overview
 GenAI Chatbot is an intelligent prompt analysis system built using Python and the Flask web framework, with an integrated API system. It is designed to interact with users via a chatbot interface, interpret a wide range of input prompts, and deliver structured analytical responses.
 
 The core of this application lies in its backend logic, tailored to perform prompt understanding and response generation through general AI (GenAI) techniques. Though currently operating with an estimated 60% accuracy, it lays a solid foundation for scalable and intelligent AI-driven applications.
