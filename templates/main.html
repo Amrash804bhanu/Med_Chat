@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Chat Application</title>
+    <style>
+        #chat-container 
+ {
+            height: 300px; /* Adjust the height as needed */
+            overflow-y: auto;
+           
+        }
+
+        .chatting{
+            padding:30px;
+            align-items:center;
+        }
+        .message{
+            text-align:center;
+            padding:20px;
+        }
+        
+        
+
+       /* Or use 'justify-content: flex-end' for flexbox alignment */
+
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        {% for comment in comments %}
+            <div class="message">
+                
+                <strong id="role-comment">{{ comment['role']}}:</strong> {{ comment['parts'][0] }}
+            </div>
+        {% endfor %}
+
+
+    </div>
+    <form action="/chat" method="post" enctype="multipart/form-data">
+        <input type="text" name="text_input">
+      
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        function scrollToBottom() {
+            var chatContainer = document.getElementById("chat-container");
+            chatContainer.scrollTop = chatContainer.scrollHeight; 
+
+        }
+
+        // Automatically scroll to the bottom when new messages are added
+        scrollToBottom();
+    </script>
+</body>
+</html>
