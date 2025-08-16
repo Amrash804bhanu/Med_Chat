@@ -80,22 +80,6 @@ Med_Chat is an intelligent chatbot application for medical conversations. It lev
 
 ---
 
-## Project Structure
-Med_Chat/
-├── app.py # Main Flask application
-
-├── requirements.txt # Dependencies
-
-├── static/ # Assets
-
-├── templates/ # HTML templates
-
-├── README.md
-
-
-
----
-
 ## API Documentation
 
 - **Endpoint:** `/chat`
