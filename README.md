@@ -81,4 +81,41 @@ Med_Chat is an intelligent chatbot application for medical conversations. It lev
 ---
 
 ## Project Structure
+Med_Chat/
+├── app.py # Main Flask application
+├── requirements.txt # Dependencies
+├── static/ # Assets
+├── templates/ # HTML templates
+├── README.md
+└── ... # Other modules
+
+
+---
+
+## API Documentation
+
+- **Endpoint:** `/chat`
+    - **Method:** POST
+    - **Parameters:** `{ "message": "user input" }`
+    - **Response:** `{ "reply": "chatbot response" }`
+    - **Example:**
+      ```
+      curl -X POST -H "Content-Type: application/json" -d '{"message": "What is hypertension?"}' http://127.0.0.1:5000/chat
+      ```
+
+---
+
+## Testing
+
+- Test scripts provided in `/tests`
+- Run tests using:
+    ```
+    python -m unittest discover tests
+    ```
+- Coverage includes correct route handling, API response integrity, error cases.
+
+---
+
+
+
 
