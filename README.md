@@ -1,100 +1,121 @@
-# GenAI Chatbot – Flask-based Prompt Analysis System
+# API based Prompt Analysis  ( chat system )
 
-# Overview
-GenAI Chatbot is an intelligent prompt analysis system built using Python and the Flask web framework, with an integrated API system. It is designed to interact with users via a chatbot interface, interpret a wide range of input prompts, and deliver structured analytical responses.
+Med_Chat
+Med_Chat is an intelligent chatbot application for medical conversations. It leverages Google's Gemini API for natural language understanding and generation, and is built using Flask for seamless web integration. The goal is to provide accurate, context-aware assistance for healthcare-related queries, illustrating modern AI integration skills in backend development.
 
-The core of this application lies in its backend logic, tailored to perform prompt understanding and response generation through general AI (GenAI) techniques. Though currently operating with an estimated 60% accuracy, it lays a solid foundation for scalable and intelligent AI-driven applications.
+Table of Contents
+Features
 
-🚀 Features
-🌐 API Integration: Seamlessly supports API-based input and output communication, making it modular and extensible.
+Installation
 
-🧩 Prompt Analysis Engine: Processes user prompts to extract intent, semantic patterns, and context.
+Usage
 
-⚙️ Backend-Powered Logic: Flask-based backend efficiently routes queries, performs analysis, and returns responses.
+Technologies Used
 
-📊 Response Accuracy Reporting: Provides performance benchmarking with a baseline of 60% accuracy in real-world scenarios.
+Project Structure
 
-🧪 Technical Implementation
-🔍 Prompt Analysis
-Uses a structured NLP pipeline to tokenize, normalize, and contextualize user inputs.
+API Documentation
 
-Implements rule-based and pattern-matching logic to interpret prompt semantics.
+Testing
 
-Designed with future integration capabilities for machine learning or transformer models (e.g., BERT, GPT) to enhance interpretation depth.
+License
 
-⚙️ Flask Backend
-RESTful API endpoints are built using Flask, allowing flexible deployment and testing.
+Contact
 
-Supports POST and GET methods to send and retrieve analyzed data.
+Features
+Real-time medical chat powered by Gemini API
 
-Handles input validation, JSON response formatting, and error logging.
+RESTful integration using Flask
 
-📡 API System
-Allows third-party systems or frontend interfaces to integrate via a standardized API.
+Secure handling of user input
 
-Accepts prompt data, processes via backend, and returns JSON-formatted analysis results.
+Scalable modular backend
 
-Secure and scalable for local or remote deployments.
+Demonstrates prompt engineering and API orchestration
 
-📈 Performance & Accuracy
-While this chatbot currently operates at ~60% accuracy based on internal benchmarks and heuristic evaluation, performance is dependent on:
+Customizable for additional healthcare APIs
 
-Prompt complexity and structure
+Installation Instructions
+Prerequisites:
 
-Vocabulary and domain relevance
+Python 3.8+
 
-Algorithmic interpretation and logic flow
+Flask
 
-The goal is to iterate on the logic and gradually integrate ML-powered models to enhance:
+Gemini API access/key
 
-Accuracy in intent detection
+Steps:
 
-Depth of natural language understanding (NLU)
+Clone the repository:
 
-Relevance and clarity of generated responses
-
-🔧 Installation & Running Locally
 bash
-Copy
-Edit
-# Clone the repository
-git clone https://github.com/your-username/genai-chatbot.git
-cd genai-chatbot
+git clone https://github.com/Amrash804bhanu/Med_Chat
+cd Med_Chat
+Install required dependencies:
 
-# Create a virtual environment and activate it
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
+bash
 pip install -r requirements.txt
+Set your Gemini API credentials in environment variables or within config as instructed.
 
-# Run the Flask app
+Run the Flask app:
+
+bash
 python app.py
-📬 API Usage Example
-POST /analyze
+The server will start on localhost. Access via your browser at http://127.0.0.1:5000/.
 
-json
-Copy
-Edit
-{
-  "prompt": "Tell me a summary of AI in medicine"
-}
-Response:
+Usage
+Enter medical queries in the chat interface.
 
-json
-Copy
-Edit
-{
-  "intent": "summary_request",
-  "topic": "give an overall thoughts and ideas about the art and humans call as passion ",
-  "analysis": "yeah , people believe a person who takes his passion professionally . he is the happiest of all in life "
-}
-📚 Future Improvements
-Integrate pre-trained GenAI models for semantic comprehension
+The chatbot processes input via Gemini API and responds with relevant medical information.
 
-Improve contextual understanding across multi-turn conversations
+Example interaction:
 
-Add database logging for training and evaluation
+text
+User: What are the symptoms of flu?
+Chatbot: Common symptoms include fever, cough, sore throat, fatigue, and body aches.
+Demo screenshot or GIF here (add accordingly).
 
-Enhance UI (optional) with a frontend interface (React/Vue)
+Technologies Used
+Core Language & Framework: Python, Flask
+
+AI & NLP: Google Gemini API
+
+Methodology: REST API integration, prompt engineering
+
+Dev Tools: GitHub, virtualenv
+
+Project Structure
+text
+Med_Chat/
+├── app.py                # Main Flask application
+├── requirements.txt      # Dependencies
+├── static/               # Assets
+├── templates/            # HTML templates
+├── README.md
+└── ...                   # Other modules
+API Documentation
+Endpoint: /chat
+
+Method: POST
+
+Parameters: { "message": "user input" }
+
+Response: { "reply": "chatbot response" }
+
+Example:
+
+bash
+curl -X POST -H "Content-Type: application/json" -d '{"message": "What is hypertension?"}' http://127.0.0.1:5000/chat
+Testing
+Test scripts provided in /tests
+
+Run tests using:
+
+bash
+python -m unittest discover tests
+Coverage includes correct route handling, API response integrity, error cases.
+
+
+
+
 
